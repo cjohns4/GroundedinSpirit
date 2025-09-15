@@ -1,1 +1,250 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chante' Johnson – Instructional Designer & Web Developer</title>
+  <style>
+ html {
+  scroll-behavior: smooth;
+  font-size: 1.2rem; 
+}
+body {
+  background: linear-gradient(90deg, #FF6F61, #FFEC8B, #F9A602); 
+  color: #333;
+} 
+body {
+  padding-top: 80px;
+  font-size: 1.50rem; 
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+  .sparkle-container {
+  position: relative;
+  overflow: hidden;
+}
 
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff 0%, #f4a6b0 100%);
+  border-radius: 50%;
+  animation: floatSparkle 3s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes floatSparkle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}  
+  .banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('backgro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .top-nav {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    color: #f5f5f5;
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin-left: 2rem;
+    position: relative;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: #00aaff;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .menu-icon {
+    list-style: none;
+  }
+
+  .menu-icon button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 1001;
+  }
+  .dropdown.open {
+  display: block;
+ }
+  .dropdown li {
+    margin: 0.5rem 0;
+  }
+
+  .dropdown li a {
+    color: #333;
+    text-decoration: none;
+  }
+   
+  @media (max-width: 600px) {
+  iframe {
+    height: 300px;
+  }
+} 
+    @media (max-width: 600px) {
+  .nav-links a {
+    font-size: 0.85rem; /* ≈13.6px */
+  }
+
+  .dropdown li a {
+    font-size: 0.85rem;
+  }
+
+  .nav-links li {
+    margin-left: 0.4rem; /* reduce spacing between tabs */
+  }
+}
+    
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="top-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+        <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Experience.html">Resume</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li class="menu-icon">
+        <button onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+        <ul class="dropdown" id="dropdownMenu">
+          <li><a href="index.html">About</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="Experience.html">Resume</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Banner (full-width hero section) -->
+ <div class="banner"></div>
+
+<!-- Main Content -->
+<div class="sparkle-container" style="position: relative;">
+  
+<!-- Flex Layout for Bio + Photo -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 3rem 2rem; max-width: 1200px; margin: auto; gap: 2rem;">
+ 
+<!-- Bio Text -->
+    <div style="flex: 1; min-width: 300px;">
+      <h1 style="font-size: 2.5rem; color: #880E4F; margin-bottom: 1rem;">Hey, It’s China. Come On In.</h1>
+      <div style="font-size: 1.25rem; line-height: 1.8; color: #1a1a1a;">
+        <p>This space is for the mind, body, and spirit. I’m a writer, a spiritual guide, a creative technologist, an educator, and an artist of everyday beauty. I build websites by hand, braid hair with intention, interpret dreams, design learning experiences, and write with depth and clarity.</p>
+        <p>Born in Harlem in the 80s—a time of fire and resilience—I’ve always carried the gift. From the womb, I’ve seen beyond the veil, moved between planes, and listened to the quiet truths most people overlook. That knowing shapes everything I create.</p>
+        <p>With degrees in Learning, Design & Technology, Computer Science, and Computer Information Systems, I bring both technical fluency and emotional intelligence to my work. But this site isn’t just about credentials—it’s about connection, story, and spirit.</p>
+        <p>Here you’ll find my projects, my poetry, my offerings, and my reflections. Whether you’re seeking a spiritual reading, curious about learning new tech, or just drawn to the energy—welcome. You’re in the right place.</p>
+        
+      </div>
+    </div>
+
+    <!-- Profile Photo -->
+    <div style="flex: 0 0 400px; text-align: center;">
+      <img src="right.jpeg" alt="Chante Johnson in a yellow blazer posing in a professional setting"
+        style="width: 100%; max-width: 360px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+    </div>
+  </div>
+
+  <!-- Sparkles (moved outside flex container) -->
+  <div class="sparkle" style="top: 20px; left: 40px;"></div>
+  <div class="sparkle" style="top: 100px; left: 120px;"></div>
+  <div class="sparkle" style="top: 180px; left: 200px;"></div>
+  <div class="sparkle" style="top: 60px; left: 300px;"></div>
+</div>
+
+ <hr style="border: none; border-top: 2px solid #D35400; margin: 3rem 0;">
+</section>
+<footer style="text-align: center; padding: 2rem;">
+<img src="logo.png" alt="Chante' logo" style="height: 70px;">
+<p style="font-size: 0.9rem; color: #777;">Made with sparkle and semantic HTML by Chante’ Johnson</p>
+  © 2025 Chante’ Johnson. All rights reserved.  
+  Content on this site may not be reproduced, distributed, or used without written permission.
+</footer>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.menu-icon button')) {
+      const dropdown = document.getElementById("dropdownMenu");
+      if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  };
+</script>
+
+</body>
+</html>
